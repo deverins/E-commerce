@@ -23,7 +23,7 @@ const App = () => {
         pauseOnHover
         theme="light"
       />
-      <div className=' font-mono-serif-custom-sans'>
+      <div className=''>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Homepage />} />

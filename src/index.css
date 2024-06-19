@@ -12,10 +12,11 @@ h1, h2, h3, h4, h5, h6, p, a, li, button{
 }
 
 html[data-theme='dark'] {
-  --tw-bg-opacity: 1;
+  --tw-bg-opacity: 5;
   background-color: rgba(27, 27, 29, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
+  --tw-text-opacity: 8;
   color: rgba(227, 227, 227, var(--tw-text-opacity));
+  background-blend-mode: screen;
 }
 
 html[data-theme='light'] {
@@ -23,4 +24,6 @@ html[data-theme='light'] {
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
+  background-blend-mode: screen;
+  background-blend-mode: luminosity;
 }

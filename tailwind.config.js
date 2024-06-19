@@ -27,6 +27,11 @@ export default {
           DEFAULT: '#1fb6ff',
           dark: '#009eeb',
         },
+        background: {
+          light: '#ffffff',
+          dark: '#1b1b1d',
+          navDark: 'rgb(36,37,38)', 
+        },
         'dark-bg': '#1f2937',
         'light-text': '#f3f4f6',
         'dark-text': '#1f2937',

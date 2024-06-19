@@ -8,7 +8,6 @@ const Cards = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-berkshire mb-4">Products</h2>
       <div className="flex flex-wrap">
         {products.map(product => (
           <div key={product.id} className="product-card p-4 border rounded m-2">
