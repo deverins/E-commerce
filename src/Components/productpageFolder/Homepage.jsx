@@ -1,8 +1,11 @@
 import React from 'react'
+import Cards from './Cards'
 
 const Homepage = () => {
   return (
-    <div className=' bg-black'>Homepage</div>
+    <div className=' '>
+        <Cards />
+    </div>
   )
 }
 

@@ -24,7 +24,8 @@
     "react-toastify": "^10.0.5",
     "reactstrap": "^9.2.2",
     "slick-carousel": "^1.8.1",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
