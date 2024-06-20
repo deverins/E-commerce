@@ -1,4 +1,4 @@
-export const setProductDetails = (product) => ({
+    export const setProductDetails = (product) => ({
   type: 'SET_PRODUCT_DETAILS',
   payload: product,
 });
