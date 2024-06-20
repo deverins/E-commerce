@@ -1,4 +1,3 @@
-// src/components/CheckOutProductDetails.js
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import useStore from '../../store/store';
@@ -20,19 +19,20 @@ const CheckOutProductDetails = () => {
   const productDetails = useSelector(state => state.product.productDetails);
 
   return (
-    <div className='w-full flex justify-center'>
-      <div>
-        <h1>Check Product Details</h1>
+    <div className='flex items-center justify-center'>
+      <div className='w-full max-w-2xl p-8 rounded-lg shadow'>
+        <h1 className='text-2xl text-center font-bold mb-6 '>Check Product Details</h1>
         {productDetails ? (
-          <Card>
-            <div>
-              <p>Name: {productDetails.name}</p>
-              <p>Description: {productDetails.description}</p>
-              <p>Price: {productDetails.price}</p>
+          <Card className='bg-white p-6 rounded-lg '>
+            <div className='w-full'>
+              <div className="h-64 bg-gray-700 rounded-xl mb-6"></div>
+              <p className='text-lg font-semibold text-gray-700 mb-2'>Name: <span className='font-normal'>{productDetails.name}</span></p>
+              <p className='text-lg font-semibold text-gray-700 mb-2'>Description: <span className='font-normal'>{productDetails.description}</span></p>
+              <p className='text-lg font-semibold text-gray-700 mb-4'>Price: <span className='font-normal'>₦{productDetails.price}</span></p>
             </div>
             <Link to={'/add-to-cart'}>
               <button
-                className='bg-blue-400 p-4 rounded-md text-white'
+                className='w-full bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-md transition duration-300'
                 onClick={() => addToCart(productDetails)}
               >
                 Add to Cart
@@ -40,7 +40,7 @@ const CheckOutProductDetails = () => {
             </Link>
           </Card>
         ) : (
-          <p>Loading product details...</p>
+          <p className='text-gray-600'>Loading product details...</p>
         )}
       </div>
     </div>

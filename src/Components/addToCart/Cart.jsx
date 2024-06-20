@@ -29,7 +29,7 @@ const Cart = () => {
               <Card className="product-card p-4 border rounded m-2">
                 <h3 className="text-xl font-berkshire">{product.name}</h3>
                 <p className="text-base">{product.description}</p>
-                <p className="text-lg">${product.price}</p>
+                <p className="text-lg">₦{product.price}</p>
                 <Button
                   className="mt-2 px-4 py-2 bg-red-500 text-white rounded"
                   onClick={() => removeFromCart(product.id)}
