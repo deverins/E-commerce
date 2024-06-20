@@ -13,14 +13,11 @@ const CheckOutProductDetails = () => {
 
   useEffect(() => {
     if (view) {
-      console.log('Fetched Product Details:', view);
       dispatch(setProductDetails(view));
     }
   }, [view, dispatch]);
 
   const productDetails = useSelector(state => state.product.productDetails);
-
-  console.log('Product details in component:', productDetails);
 
   return (
     <div className='w-full flex justify-center'>

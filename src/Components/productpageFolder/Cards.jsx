@@ -15,7 +15,7 @@ const Cards = () => {
                         <div className="h-48 bg-gray-700 rounded-xl"></div>
                         <div className='flex flex-row justify-between px-3 mt-5 mb-5'>
 
-                            <span className="text-xl font-berkshire">{product.name}</span>
+                            <span className="text-xl text-black font-berkshire">{product.name}</span>
                             <p className="font-bold  text-red-600">₦{product.price}</p>
                         </div>
                         <Link to={`/check-out-product/${product.id}`}>

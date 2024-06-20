@@ -13,9 +13,13 @@ const useStore = create((set) => ({
     view: product,
   })),
 
-  addToCart: (product) => set((state) => ({
-    cart: [...state.cart, product],
-  })),
+  addToCart: (product) => set((state) => {
+    const isAlreadyInCart = state.cart.some(cartItem => cartItem.id === product.id);
+    if (!isAlreadyInCart) {
+      return { cart: [...state.cart, product] };
+    }
+    return state;
+  }),
 
   removeFromCart: (productId) => set((state) => ({
     cart: state.cart.filter(product => product.id !== productId),
