@@ -23,9 +23,11 @@ const Nav = () => {
 
             {/* Left side with checkout and cart buttons */}
             <div className="flex items-center space-x-4">
-              <Link to={""} className="text-white hover:text-gray-300">
+            
+              <Link to={`/check-out-product/:id`} className="text-white hover:text-gray-300">
                 Checkout
               </Link>
+                
               <Link to={""} className="text-white hover:text-gray-300">
                 Cart
               </Link>

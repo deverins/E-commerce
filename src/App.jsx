@@ -5,6 +5,8 @@ import Layout from './Components/Layout';
 import Homepage from './Components/productpageFolder/Homepage';
 import CreateProduct from './Components/CreateProduct';
 import './index.css';
+import Cart from './Components/addToCart/Cart';
+import CheckOutProductDetails from './Components/productDetailsF/CheckOutProductDetails';
 
 const App = () => {
 
@@ -28,6 +30,8 @@ const App = () => {
           <Route element={<Layout />}>
             <Route index element={<Homepage />} />
             <Route path={'/create'} element={<CreateProduct />} />
+            <Route path={'/add-to-cart'} element={<Cart />} />
+            <Route path={'/check-out-product/:id'} element={<CheckOutProductDetails />} />
           </Route>
         </Routes>
       </div>

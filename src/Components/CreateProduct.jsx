@@ -29,7 +29,7 @@ const CreateProduct = () => {
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Product Name" required />
                 <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Product Description" required />
                 <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Product Price" required />
-                <button type="submit">Add Product</button>
+                <button type="submit" className='bg-blue-600 rounded ml-2  p-2'>Add Product</button>
             </form>
         </div>
     );
