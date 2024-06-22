@@ -1,13 +1,14 @@
+// src/redux/productReducer.js
 const initialState = {
-  productDetails: {},
+  products: []
 };
 
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_PRODUCT_DETAILS':
+    case 'ADD_PRODUCT':
       return {
         ...state,
-        productDetails: action.payload,
+        products: [...state.products, action.payload]
       };
     default:
       return state;
