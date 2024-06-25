@@ -1,4 +1,3 @@
-// src/redux/productReducer.js
 const initialState = {
   products: []
 };
@@ -11,7 +10,7 @@ const productReducer = (state = initialState, action) => {
         products: [...state.products, action.payload]
       };
     default:
-      return state;
+      return state; 
   }
 };
 
