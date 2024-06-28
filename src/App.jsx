@@ -1,12 +1,23 @@
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Layout from './Components/Layout';
 import Homepage from './Components/productpageFolder/Homepage';
-import CreateProduct from './Components/CreateProduct';
+import ZustandCreateProduct from './Components/CreateProduct/ZustandCreateProduct';
+import ReduxCreateProduct from './Components/CreateProduct/ReduxCreateProduct';
+import ContextCreateProduct from './Components/CreateProduct/ContextCreateProduct';
 import './index.css';
-import Cart from './Components/addToCart/Cart';
-import CheckOutProductDetails from './Components/productDetailsF/CheckOutProductDetails';
+import ZustandProductDetails from './Components/productDetailsF/ZustandCheckOutProductDetails';
+import ReduxProductDetails from './Components/productDetailsF/ReduxCheckOutProductDetails';
+import ContextProductDetails from './Components/productDetailsF/ContextCheckOutProductDetails';
+import ZustandCart from './Components/addToCart/ZustandCart';
+import ReduxCart from './Components/addToCart/ReduxCart';
+import ContextCart from './Components/addToCart/ContextCart';
+import ProductProvider from './context/ProductContext';
+import ZustandCard from './Components/productpageFolder/ZustandCard';
+import ReduxCard from './Components/productpageFolder/ReduxCard';
+import ContextCard from './Components/productpageFolder/ContextCard';
+
 
 const App = () => {
 
@@ -26,14 +37,36 @@ const App = () => {
         theme="light"
       />
       <div className=''>
+      <ProductProvider>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Homepage />} />
-            <Route path={'/create'} element={<CreateProduct />} />
-            <Route path={'/add-to-cart'} element={<Cart />} />
-            <Route path={'/check-out-product/:id'} element={<CheckOutProductDetails />} />
+            <Route path="/zustand"  element={<Outlet />} >
+              <Route path="product"  element={<ZustandCard />} />
+              <Route path="create"  element={<ZustandCreateProduct />} />
+              <Route path="zustand-add-to-cart"  element={<ZustandCart />} />
+              <Route path="check-out-product/:id"  element={<ZustandProductDetails />} />
+            </Route>
+            <Route path="/redux"  element={<Outlet />} >
+              <Route path="product"  element={ <ReduxCard /> } />
+              <Route path="create"  element={<ReduxCreateProduct />} />
+              <Route path="redux-add-to-cart"  element={<ReduxCart />} />
+              <Route path="check-out-product/:id"  element={<ReduxProductDetails />} />
+            </Route>
+                    <Route path="/context"  element={<Outlet />} >
+                      <Route path="product"  element={ <ContextCard /> } />
+                      <Route path="create"  element={<ContextCreateProduct />} />
+                      <Route path="context-add-to-cart"  element={<ContextCart />} />
+                      <Route path="check-out-product/:id"  element={<ContextProductDetails />} />
+                    </Route>
+
+
+            
+            {/* <Route path={'/redux/check-out-product/:id'} element={<CheckOutProductDetails />} />
+            <Route path={'/context/check-out-product/:id'} element={<CheckOutProductDetails />} /> */}
           </Route>
         </Routes>
+      </ProductProvider>
       </div>
     </>
   );

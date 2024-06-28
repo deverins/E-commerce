@@ -1,16 +1,24 @@
+import { ADD_PRODUCT, SET_PRODUCT_DETAILS } from './actions/productActions';
+
 const initialState = {
-  products: []
+  products: [],
+  productDetails: null,
 };
 
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_PRODUCT':
+    case ADD_PRODUCT:
       return {
         ...state,
-        products: [...state.products, action.payload]
+        products: [...state.products, action.payload],
+      };
+    case SET_PRODUCT_DETAILS:
+      return {
+        ...state,
+        productDetails: action.payload,
       };
     default:
-      return state; 
+      return state;
   }
 };
 

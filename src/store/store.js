@@ -5,12 +5,12 @@ const useStore = create((set) => ({
   cart: [],
   view: {},
 
-  addProduct: (product) => set((state) => ({
-    products: [...state.products, product],
-  })),
+  addProduct: (product) => set((state) =>{
+    return {products: [...state.products, product]}
+  }),
 
   viewProduct: (product) => set(() => ({
-    view: product,
+    view: product,  
   })),
 
   addToCart: (product) => set((state) => {

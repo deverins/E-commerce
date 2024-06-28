@@ -3,7 +3,7 @@ import useStore from '../../store/store';
 import { Card, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const Cart = () => {
+const ZustandCart = () => {
   const cart = useStore(state => state.cart);
   const removeFromCart = useStore(state => state.removeFromCart);
   const clearCart = useStore(state => state.clearCart);
@@ -52,4 +52,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default ZustandCart;
