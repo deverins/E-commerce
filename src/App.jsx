@@ -12,11 +12,11 @@ import ReduxProductDetails from './Components/productDetailsF/ReduxCheckOutProdu
 import ContextProductDetails from './Components/productDetailsF/ContextCheckOutProductDetails';
 import ZustandCart from './Components/addToCart/ZustandCart';
 import ReduxCart from './Components/addToCart/ReduxCart';
-import ContextCart from './Components/addToCart/ContextCart';
 import ProductProvider from './context/ProductContext';
 import ZustandCard from './Components/productpageFolder/ZustandCard';
 import ReduxCard from './Components/productpageFolder/ReduxCard';
 import ContextCard from './Components/productpageFolder/ContextCard';
+import ContextCart from './Components/addToCart/ContextCart';
 
 
 const App = () => {
