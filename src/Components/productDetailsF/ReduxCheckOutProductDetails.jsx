@@ -25,12 +25,12 @@ const ReduxCheckOutProductDetails = () => {
 
   return (
     <>
-    <div className='flex items-center justify-center'>
       <marquee className='text-center text-2xl font-bold' behavior="slow" direction="right">
         <h2>
           Welcome to our Store
         </h2>
       </marquee>
+    <div className='flex items-center justify-center'>
       <div className='w-full max-w-2xl p-8 rounded-lg shadow'>
         <h1 className='text-2xl text-center font-bold mb-6 '>Check Product Details</h1>
         {product ?

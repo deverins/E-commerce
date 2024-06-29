@@ -53,17 +53,12 @@ const App = () => {
               <Route path="redux-add-to-cart"  element={<ReduxCart />} />
               <Route path="check-out-product/:id"  element={<ReduxProductDetails />} />
             </Route>
-                    <Route path="/context"  element={<Outlet />} >
-                      <Route path="product"  element={ <ContextCard /> } />
-                      <Route path="create"  element={<ContextCreateProduct />} />
-                      <Route path="context-add-to-cart"  element={<ContextCart />} />
-                      <Route path="check-out-product/:id"  element={<ContextProductDetails />} />
-                    </Route>
-
-
-            
-            {/* <Route path={'/redux/check-out-product/:id'} element={<CheckOutProductDetails />} />
-            <Route path={'/context/check-out-product/:id'} element={<CheckOutProductDetails />} /> */}
+              <Route path="/context"  element={<Outlet />} >
+                <Route path="product"  element={ <ContextCard /> } />
+                <Route path="create"  element={<ContextCreateProduct />} />
+                <Route path="context-add-to-cart"  element={<ContextCart />} />
+                <Route path="check-out-product/:id"  element={<ContextProductDetails />} />
+              </Route>
           </Route>
         </Routes>
       </ProductProvider>
