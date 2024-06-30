@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useStore from '../../store/store';
+import useStore from '../../zustandstore/store';
 import { useNavigate } from 'react-router-dom';
 
 

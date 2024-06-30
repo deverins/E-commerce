@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from './Theme/ThemeToggle ';
-import useThemeStore from '../store/useThemeStore ';
+import useThemeStore from '../zustandstore/useThemeStore ';
 
 const Nav = () => {
   const { theme } = useThemeStore();

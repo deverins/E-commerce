@@ -1,5 +1,5 @@
 import React from 'react';
-import useStore from '../../store/store';
+import useStore from '../../zustandstore/store';
 import { Link } from 'react-router-dom';
 import { Card, CardBody } from 'reactstrap';
 

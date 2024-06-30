@@ -6,7 +6,7 @@ const ProductProvider = ({ children }) => {
   // i initialize a state variables for managaging products and cart
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-
+ 
 
   const addProduct = (product) => {
     // setProducts is being called and the spreading the existing product to join the new product. then the setproducts now  update the initial state to the new products list
@@ -33,6 +33,7 @@ const ProductProvider = ({ children }) => {
 
   const removeFromCart = (productId) => {
     setCart(cart.filter(product => product.id !== productId));
+    
   };
 
   const clearCart = () => {
