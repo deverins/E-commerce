@@ -19,13 +19,15 @@ const Nav = () => {
                 Products
               </Link>
             </div>
-
             <div className="flex items-center space-x-4">
               <Link to={'/create'} className="text-white hover:text-gray-300">
                 Create
               </Link>
               <Link to={"/add-to-cart"} className="text-white hover:text-gray-300">
                 Cart
+              </Link>
+              <Link to={"/transfer"} className="text-white hover:text-gray-300">
+              Transfer
               </Link>
               <ThemeToggle />
             </div>
